@@ -9,7 +9,4 @@ bench:
 .PHONY: lint
 lint:
 	@golangci-lint run --new=false ./...
-	@for f in $$(find . -name '*.go'); do \
-		gofumpt $$f | diff $$f -; \
-	done
 	
